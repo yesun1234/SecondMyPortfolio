@@ -1,0 +1,883 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+body,
+html {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  font-family: "Nanum Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(249, 219, 239);
+}
+#contact textarea {
+  width: 350px;
+  height: 100px;
+}
+a {
+  text-decoration: none;
+  color: rgb(249, 219, 239);
+}
+#root {
+  width: 1400px;
+}
+#App {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 1400px;
+}
+#aside {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid rgb(249, 219, 239);
+  padding: 50px 10px;
+  position: fixed;
+}
+#contents {
+  width: 1100px;
+  padding: 80px 80px;
+  margin-left: 300px;
+}
+
+#nav {
+  height: 100%;
+}
+#nav ul {
+  list-style-type: none;
+  height: 100%;
+}
+#nav ul li {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  border-bottom: 1px dashed rgb(249, 219, 239);
+  width: 80%;
+  cursor: pointer;
+  display: flex;
+  padding-bottom: 10px;
+}
+#header span.fabars {
+  display: none;
+}
+#nav ul li span {
+  position: relative;
+  width: 50px;
+}
+#footer {
+  width: 100%;
+  height: 250px;
+}
+.footericon {
+  cursor: pointer;
+}
+#footer .footertop {
+  height: 280px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#footer .footerleft {
+  width: 25%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1px solid rgb(249, 219, 239);
+  overflow: hidden;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+#footer .footerleft img {
+  overflow: hidden;
+  object-fit: cover;
+  height: 100%;
+}
+#footer .footermain {
+  list-style-type: none;
+  padding: 0;
+  width: 25%;
+  font-size: 18px;
+  margin-top: 70px;
+}
+#footer .footermain li {
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: 20%;
+  width: 40px;
+}
+#footernav span {
+  margin-left: 10px;
+  margin-top: 3px;
+  position: absolute;
+  transition: all ease 0.3s;
+}
+#footer .footermain li:hover #footernav span {
+  color: rgb(246, 149, 165);
+}
+
+#footer .footerright {
+  margin-top: 120px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  font-size: 30px;
+}
+#footer .footerright li {
+  margin-right: 20px;
+}
+#footer .footerbottom {
+  margin-left: 38%;
+}
+#footer .instagram:hover {
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #ed414142,
+      transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+  color: #ebebeb;
+  border-radius: 5px;
+  padding: 0;
+  font-weight: bold;
+}
+.facebook,
+.instagram,
+.github {
+  transition: all ease 0.2s;
+}
+#footer .facebook:hover {
+  background: #ededed;
+  color: #39569c;
+  border-radius: 50%;
+  padding: 0;
+  font-weight: bold;
+}
+#footer .github:hover {
+  color: #ebebeb;
+  background-color: #000;
+  font-weight: bold;
+  border-radius: 100%;
+}
+.fahamsa {
+  margin-left: 40%;
+}
+.fccursor {
+  font-size: 40px;
+  transform: scaleX(-1);
+  transition: all ease 0.3s;
+}
+#nav ul li:hover .fccursor {
+  transform: rotate(120deg);
+}
+.pifinnthehuman {
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 37px;
+}
+.title {
+  width: 200px;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 1px dashed rgb(249, 219, 239);
+  padding-bottom: 3px;
+  display: flex;
+  margin-bottom: 90px;
+  margin-top: 300px;
+  margin-left: 20px;
+}
+#navs {
+  display: none;
+}
+.story-box {
+  width: 350px;
+  height: 90px;
+  background-color: rgba(189, 187, 187, 0.3);
+  border-radius: 20px;
+  margin-bottom: 80px;
+  padding: 25px 30px 25px 25px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all ease 0.3s;
+}
+.story-box strong {
+  font-size: 20px;
+  line-height: 2;
+}
+.story-box:nth-child(2),
+.story-box:nth-child(4) {
+  width: 380px;
+  height: 90px;
+  margin-left: 50px;
+  background-color: rgba(189, 187, 187, 0.3);
+  border-radius: 20px;
+  margin-bottom: 80px;
+  padding: 40px 25px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all ease 0.3s;
+}
+.story-box::after {
+  content: "";
+  width: 60px;
+  border-top: 1px solid rgb(249, 219, 239);
+  border-bottom: none;
+  position: absolute;
+  left: 320px;
+  transition: all ease 0.3s;
+  height: 1px;
+}
+.story-box:nth-child(2)::after,
+.story-box:nth-child(4)::after {
+  content: "";
+  height: 1px;
+  width: 110px;
+  border-collapse: collapse;
+  border-top: 1px solid rgb(249, 219, 239);
+  border-bottom: none;
+  position: absolute;
+  left: 320px;
+  transition: all ease 0.3s;
+}
+.story-box:hover::after {
+  content: "";
+  width: 70px;
+}
+.story-box:hover {
+  margin-left: 10px;
+}
+.story-box:nth-child(3):hover,
+.story-box:nth-child(5):hover {
+  content: "";
+  margin-left: 40px;
+}
+.story-box:nth-child(3):hover::after,
+.story-box:nth-child(5):hover::after {
+  content: "";
+  width: 100px;
+}
+.cggirl {
+  margin-right: 30px;
+  font-size: 40px;
+  display: flex;
+  margin-bottom: 10px;
+}
+#nav .fabars {
+  display: none;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+}
+.contactleft {
+  width: 40%;
+}
+.contactleft img {
+  width: 100%;
+  margin-top: 80px;
+  padding: 30px;
+}
+.contactright {
+  width: 40%;
+  padding: 30px;
+  margin-left: 30px;
+}
+.contactright input {
+  width: 100%;
+  height: 25px;
+  border-radius: 8px;
+  border: 1px solid #c0bfbf;
+}
+input:focus {
+  outline: 1px solid #dbd9d9;
+}
+.contactright textarea {
+  border-radius: 8px;
+  border: 1px solid #c0bfbf;
+}
+.contactright button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 10px rgb(64, 64, 122);
+  background: rgb(72, 72, 178);
+  font-weight: bold;
+  margin-left: 30%;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #fff;
+  transition: all ease 0.3s;
+}
+.contactright button:hover {
+  box-shadow: inset 0px 0px 10px rgb(64, 64, 122);
+  background: rgb(49, 49, 127);
+}
+.contactright h4:first-of-type {
+  margin-top: 10px;
+}
+.contactright h4 {
+  margin-bottom: 10px;
+}
+.contactright ul {
+  list-style-type: none;
+  padding: 0;
+}
+.contactright ul li {
+  line-height: 2;
+}
+.contactIcon {
+  font-size: 19px;
+  display: inline-block;
+}
+.contactright ul li a {
+  color: #666;
+}
+.skillList ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  height: 230px;
+}
+.skillList ul li {
+  width: 20%;
+  margin-left: 10px;
+}
+.skillList ul li:first-child div::before {
+  color: #888;
+  width: 79%;
+  height: 34%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  display: block;
+  content: "HTML";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3;
+  padding: calc(35% - 1.3vw) 0;
+}
+.skillList ul li:nth-child(2) div::before {
+  color: #888;
+  width: 79%;
+  height: 34%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  display: block;
+  content: "CSS";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3;
+  padding: calc(35% - 1.3vw) 0;
+}
+.skillList ul li:nth-child(3) div::before {
+  color: #888;
+  width: 79%;
+  height: 34%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  display: block;
+  content: "JS&JQ";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3;
+  padding: calc(35% - 1.3vw) 0;
+}
+.skillList ul li:nth-child(4) div::before {
+  color: #888;
+  width: 79%;
+  height: 34%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  display: block;
+  content: "REACT";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3;
+  padding: calc(35% - 1.3vw) 0;
+}
+.skillList ul li:nth-child(5) div::before {
+  color: #888;
+  width: 79%;
+  height: 34%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  display: block;
+  content: "BOOTSTRAP";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3;
+  padding: calc(35% - 1.3vw) 0;
+}
+.donut {
+  width: calc(100% - 12px);
+  padding-bottom: calc(100% - 16px);
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  background: conic-gradient(#f182e4 0% 72%, #f2f2f2 72% 100%);
+}
+.donut::before {
+  color: #888;
+  width: 79%;
+  height: 34%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  display: block;
+  content: attr(data-percent) "%";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+  padding: calc(35% - 1.3vw) 0;
+}
+@media (max-width: 786px) {
+  #aside {
+    width: 100%;
+    height: 70px;
+    z-index: 100;
+    position: fixed;
+    padding-top: 20px;
+    background-color: rgb(250, 208, 237);
+    padding-bottom: 20px;
+  }
+  #header p {
+    display: none;
+  }
+  #header {
+    display: flex;
+    position: relative;
+  }
+  #header span.fabars {
+    display: block;
+    position: absolute;
+    right: 50px;
+    bottom: 28px;
+    transition: all ease 0.3s;
+    color: rgb(249, 219, 239);
+  }
+  #header span .fabars:hover {
+    content: "";
+    color: #fff;
+    cursor: pointer;
+  }
+  #navs ul {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 100%;
+    background-color: rgba(250, 208, 237, 0.4);
+    position: absolute;
+    left: -10px;
+    bottom: -100px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  #nav ul {
+    display: none;
+  }
+  #navs ul li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    margin-right: 30px;
+    margin-left: 20px;
+    padding-top: 30px;
+  }
+
+  .fccursor {
+    font-size: 30px;
+    justify-content: flex-start;
+    transform: scaleX(-1);
+    transition: all ease 0.3s;
+  }
+
+  #navs {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+    width: 100%;
+    transition: all ease-in-out;
+    overflow: hidden;
+  }
+  #navs ul li {
+    margin-left: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  #navs ul {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  }
+  #contents {
+    width: 786px;
+    margin-top: 160px;
+    margin-left: 0;
+    padding: 0;
+  }
+  #about {
+    width: 500px;
+    padding: 30px;
+    height: 925px;
+  }
+  #about img {
+    position: absolute;
+    bottom: -300px;
+    left: 40px;
+  }
+  .fahamsa {
+    position: absolute;
+    left: 6%;
+  }
+  .story-box:nth-child(2),
+  .story-box:nth-child(4),
+  .story-box:nth-child(6) {
+    width: 380px;
+    height: 90px;
+    margin-left: 70px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    margin-bottom: 80px;
+    padding: 40px 40px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all ease 0.3s;
+  }
+  .story-box:nth-child(1),
+  .story-box:nth-child(3),
+  .story-box:nth-child(5) {
+    width: 380px;
+    height: 80px;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    margin-bottom: 80px;
+    padding: 40px 25px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all ease 0.3s;
+  }
+
+  .story-box::after {
+    content: "";
+    width: 30px;
+    border-top: 1px solid rgb(249, 219, 239);
+    border-bottom: none;
+    border-collapse: collapse;
+    position: absolute;
+    left: 0px;
+    transition: all ease 0.3s;
+    height: 1px;
+  }
+  .story-box:nth-child(2)::after,
+  .story-box:nth-child(4)::after,
+  .story-box:nth-child(6)::after {
+    content: "";
+    width: 70px;
+    border-top: 1px solid rgb(249, 219, 239);
+    border-bottom: none;
+    position: absolute;
+    left: 0px;
+    transition: all ease 0.3s;
+  }
+  .story-box:hover::after {
+    content: "";
+    width: 50px;
+  }
+  .story-box:hover {
+    margin-left: 40px;
+  }
+  .story-box:nth-child(3):hover,
+  .story-box:nth-child(5):hover {
+    content: "";
+    margin-left: 40px;
+  }
+  .story-box:nth-child(3):hover::after,
+  .story-box:nth-child(5):hover::after {
+    content: "";
+    width: 40px;
+  }
+  .story-box:nth-child(2):hover::after,
+  .story-box:nth-child(4):hover::after {
+    content: "";
+    width: 40px;
+  }
+  .fabars button {
+    border: none;
+    background: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(249, 219, 239);
+  }
+
+  #navs ul li:hover .fccursor {
+    transform: rotate(120deg);
+  }
+  #footer {
+    width: 600px;
+    height: 200px;
+    justify-content: space-between;
+  }
+  #footer .footertop {
+    width: 100%;
+    height: 150px;
+  }
+  #footer .footerleft {
+    margin: 0;
+    width: 150px;
+    height: 150px;
+  }
+  #footer .footermain {
+    margin: 0;
+    margin-top: 20px;
+  }
+  #footer .footerright {
+    margin: 0;
+    margin-top: 60px;
+  }
+  #footer .footerbottom {
+    margin-top: 30px;
+    margin-left: 170px;
+  }
+  #contact {
+    width: 500px;
+  }
+  .contact {
+    display: block;
+  }
+  .contactleft {
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  .contactright {
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  .contactright textarea {
+    width: 400px;
+  }
+  .contactright button {
+    margin-left: 39%;
+  }
+  .skillList {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    height: 400px;
+  }
+  .skillList ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    height: 360px;
+    position: relative;
+  }
+  .skillList ul li:first-child {
+    width: 23%;
+    margin-left: 10px;
+    position: absolute;
+    left: 30px;
+  }
+  .skillList ul li:nth-child(2) {
+    width: 23%;
+    margin-left: 10px;
+    position: absolute;
+    left: 260px;
+  }
+  .skillList ul li:nth-child(3) {
+    width: 23%;
+    margin-left: 10px;
+    position: absolute;
+    left: -13px;
+    bottom: 0px;
+  }
+  .skillList ul li:nth-child(4) {
+    width: 23%;
+    margin-left: 10px;
+    position: absolute;
+    left: 165px;
+    bottom: 0px;
+  }
+  .skillList ul li:nth-child(5) {
+    width: 23%;
+    margin-left: 10px;
+    position: absolute;
+    left: 343px;
+    bottom: 0px;
+  }
+
+  .skillList ul li:first-child div::before {
+    color: #888;
+    width: 79%;
+    height: 17%;
+    padding: calc(35% - 0.64vw) 0;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 9%;
+    display: block;
+    content: "HTML";
+    transform: skew(-0.03deg);
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: calc(35% - 1.3vw) 0;
+  }
+  .skillList ul li:nth-child(2) div::before {
+    color: #888;
+    width: 79%;
+    height: 17%;
+    padding: calc(35% - 0.64vw) 0;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 9%;
+    display: block;
+    content: "CSS";
+    transform: skew(-0.03deg);
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: calc(35% - 1.3vw) 0;
+  }
+  .skillList ul li:nth-child(3) div::before {
+    color: #888;
+    width: 79%;
+    height: 17%;
+    padding: calc(35% - 0.64vw) 0;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 9%;
+    display: block;
+    content: "JS&JQ";
+    transform: skew(-0.03deg);
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: calc(35% - 1.3vw) 0;
+  }
+  .skillList ul li:nth-child(4) div::before {
+    color: #888;
+    width: 79%;
+    height: 17%;
+    padding: calc(35% - 0.64vw) 0;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 9%;
+    display: block;
+    content: "REACT";
+    transform: skew(-0.03deg);
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: calc(35% - 1.3vw) 0;
+  }
+  .skillList ul li:nth-child(5) div::before {
+    color: #888;
+    width: 79%;
+    height: 17%;
+    padding: calc(35% - 0.64vw) 0;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 9%;
+    display: block;
+    content: "BOOTSTRAP";
+    transform: skew(-0.03deg);
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: calc(35% - 1.3vw) 0;
+  }
+  .donut {
+    width: calc(100% - 12px);
+    padding-bottom: calc(100% - 16px);
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    background: conic-gradient(#f182e4 0% 72%, #f2f2f2 72% 100%);
+  }
+  .donut::before {
+    color: #888;
+    width: 79%;
+    height: 34%;
+    padding: calc(35% - 0.64vw) 0;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 9%;
+    display: block;
+    content: attr(data-percent) "%";
+    transform: skew(-0.03deg);
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: calc(35% - 1.3vw) 0;
+  }
+  #contact textarea {
+    width: 400px;
+    height: 100px;
+  }
+}
